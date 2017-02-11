@@ -3,17 +3,6 @@ var CACHE_FILES = [
 	
 ];
 
-if ('serviceWorker' in navigator) {
-  	window.addEventListener('load', function() {
-    	navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      	// Registration was successful
-      	console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-      	console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
 // During the installation phase, you'll usually want to cache static assets.
 self.addEventListener('install', function(e) {
     // Once the service worker is installed, go ahead and fetch the resources to make this work offline.
