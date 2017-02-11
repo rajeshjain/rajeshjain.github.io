@@ -4,16 +4,16 @@
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Test page</title>
-		<link rel="manifest" href="/manifest.json">
+		<link rel="manifest" href="one/manifest.json">
 	</head>
 	<body>
-		Test page 
+		Page with serviceWorker
 	</body>
 
 	<script type="text/javascript">
 		if ('serviceWorker' in navigator) {
 	  		window.addEventListener('load', function() {
-	    		navigator.serviceWorker.register('/sw.js').then(function(registration) {
+	    		navigator.serviceWorker.register('one/sw.js').then(function(registration) {
 		      		// Registration was successful
 		      		console.log('ServiceWorker registration successful with scope: ', registration.scope);
 	    		}).catch(function(err) {
